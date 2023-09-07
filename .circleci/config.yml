@@ -517,8 +517,6 @@ workflows:
     jobs:
       - pretty-docs
   normal:
-    when:
-      equal: [normal, << pipeline.parameters.workflow >>]
     jobs:
       - pretty-docs
       - build
