@@ -39,7 +39,7 @@ jobs:
   trigger-normal-tests:
     runs-on: ubuntu-latest
     needs: get-branch
-    if: github.event_name == 'pull_request_target' && contains(github.event.pull_request.labels.*.name, 'ci:normal')
+    if: github.event_name == 'pull_request_target'
     steps:
       - name: Trigger Normal tests
         run: >
